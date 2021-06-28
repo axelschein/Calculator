@@ -1,0 +1,115 @@
+* { 
+    margin: 0; 
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+.wrap {
+    height: 100vh;
+    background: linear-gradient(1deg, rgba(118,15,221,0.8) 1%, rgb(11, 12, 11) 110%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 70vw;
+    margin: auto;
+}
+h2, button {
+    color: #FFF;
+    font-variant-caps: small-caps;
+}
+.wrap__item {
+    display: flex;
+    flex-direction: column;
+    border: 3px groove #353831;
+    border-radius: 3px;
+    padding: 15px;
+    margin: auto;
+    margin-top: 10vh;
+    align-items: center; 
+    /* background-color: rgb(146, 3, 87); */
+    
+
+    /* background: rgb(118,15,221); */
+    background: linear-gradient(1deg, rgba(255, 15, 176, 0.5) 1%, rgba(118,15,221,0.8) 110%); 
+    width: 220px;
+}
+.display {
+    display: flex;
+    flex-direction: row;
+    width: 240px;
+    height: 10vh;
+    border-radius: 2px;
+    background-color: rgb(11, 12, 11);    
+}
+.display__operator{
+    padding: 9px;
+    
+}
+.display__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 220px;
+    height: 8vh;
+    border-radius: 2px;
+    background-color: rgb(11, 12, 11);
+    
+    padding: 5px;
+}
+.display__previous-values {
+    color: rgba(255, 252, 51, 0.8);
+    font-size: 0.9rem;
+    
+    
+}
+.display__current-values {
+    color: #FFF;
+    font-size: 2rem;
+    
+}
+.display__operator {
+    color: #FFF;
+    font-size: 1.2rem;
+    
+}
+
+.keyboard__container {
+    padding: 10px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 3.5em );
+    grid-template-rows: repeat(5, 3.5em );
+    grid-auto-flow: row;
+
+}
+button {
+    margin: 2px;
+    border-radius: 3px;
+    border-style: double;
+    border-color: 1px solid rgb(128, 128, 128);
+    background-color: rgb(32, 252, 143, 0.6);
+    color: #FFF;
+    box-shadow: 0px -2px 5px 1px rgba(255, 15, 176, 0.5);
+}
+button:hover {
+    background-color: rgb(32, 252, 143, 0.9);
+}
+.ac {
+    grid-column: span 2;
+}
+.equal{
+    grid-column: span 2;
+
+} 
+
+.operations__history {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #FFF;
+    background-color: black;
+    width: 100%;
+    justify-content: space-around;
+    
+}

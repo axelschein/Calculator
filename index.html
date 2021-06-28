@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="Calculator.js"></script> -->
+    <script defer src="index.js"></script>
+    <script src="Calculate.js"></script>
+    
+</head>
+<body class="wrap">
+    <div class="wrap__item">
+    <h2 >ho</h2>
+        <div class="display">
+          <div class="display__operator"></div>
+          <div class="display__container">
+            <div class="display__previous-values">
+
+
+            </div>
+              
+            <div class="display__current-values">
+              <input type="text">
+
+            </div>           
+          </div>
+        </div>
+        
+        
+        <div class="keyboard__container">
+          <button class="ac" onclick="clear()" >AC</button>
+          <button class="delete">DEL</button>
+          <button data-value="÷" class="operator">÷</button>
+          <button data-value="7" class="num">7</button>
+          <button data-value="8" class="num">8</button>
+          <button data-value="9" class="num">9</button>
+          <button data-value="*" class="operator">x</button>
+          <button data-value="4" class="num">4</button>
+          <button data-value="5" class="num">5</button>
+          <button data-value="6" class="num">6</button>
+          <button data-value="-" class="operator">-</button>
+          <button data-value="1" class="num">1</button>
+          <button data-value="2" class="num">2</button>
+          <button data-value="3" class="num">3</button>
+          <button data-value="+" class="operator">+</button>
+          <button class="dot">.</button>
+          <button data-value="0" class="num">0</button>
+          <button class="equal">=</button>
+          
+        </div>
+        
+        
+    </div>
+    <div class="wrap__item">
+      <p class="operations__history">654654</p>
+    </div>
+</body>
+</html>
