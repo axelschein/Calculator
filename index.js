@@ -1,6 +1,6 @@
 const numberBtns = document.querySelectorAll(".num"); 
 const operator = document.querySelectorAll(".operator");
-// const dot = document.querySelector(".dot"); dot.addEventListener('click', () => {console.log(dot.textContent)}, false);
+//const dot = document.querySelector(".dot"); dot.addEventListener('click', () => {console.log(dot.textContent)}, false);
 const deleteButton = document.querySelector(".delete"); 
 const acButton = document.querySelector(".ac"); 
 const equal = document.querySelector(".equal"); 
@@ -69,9 +69,10 @@ function numbers() {
 }
 
 function updateNumValue(value){
-    const currentNum = num ? num.toString() : " "; // condicional ternario 
+    const currentNum = num ? num.toString() : ""; // condicional ternario 
     const newValue = currentNum + value; 
-    num = Number(newValue)
+    num = newValue; //le saque el Number() porque me redondea cuanto es un numero y un punto (5. = 5)
+    
 
 } 
 
@@ -85,6 +86,7 @@ function clear(){
     acButton.addEventListener('click', () => {
     num1 = null;
     num2 = null;
+    num = null;
     //currentNum = "";
     //previousNum = "";
     currentValueText.innerText = " ";
@@ -95,7 +97,7 @@ function clear(){
 function del(){
     deleteButton.addEventListener('click', () => {
         
-        num1 = num1.toString().slice(0,-1);      
+        num = num.toString().slice(0,-1);      
         print();
     }, false);
 }
