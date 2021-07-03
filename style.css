@@ -2,8 +2,10 @@
     margin: 0; 
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
+
     
 }
+
 .wrap {
     height: 100vh;
     background: linear-gradient(1deg, rgba(118,15,221,0.8) 1%, rgb(11, 12, 11) 110%);
@@ -103,7 +105,7 @@ button:hover {
 
 } 
 
-.operations__history {
+ul, li {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -111,5 +113,11 @@ button:hover {
     background-color: black;
     width: 100%;
     justify-content: space-around;
+    
+    
+}
+li {
+    
+    list-style: none;
     
 }
