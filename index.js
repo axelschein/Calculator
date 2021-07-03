@@ -36,9 +36,14 @@ function operators(){
         button.addEventListener('click', () => {
             const oper = button.dataset.value;
             operatorDefine(oper);
-            if (operationResult != null) {// en caso de querer usar el resultado de la operacion como mi primer valor
-                
+            if (operationResult != null && num == null) {// en caso de querer usar el resultado de la operacion como mi primer valor
+                console.log('yilt');
                 return firstNumberUp(operationResult);
+                
+            } else if (num != null && num1 != null && operationResult != null) {// en caso de querer arrancar una nueva cuenta resetear todo
+                operationResult=null;
+                console.log('colot')
+                return firstNumberUp(num);
                 
             } else {
                 
@@ -82,6 +87,7 @@ function clear(){
     num1 = null;
     num2 = null;
     num = null;
+    
     currentValueText.innerText = "";
     previousValueText.innerText = "";
     operatorText.innerText = "";
@@ -135,13 +141,19 @@ function calculate () {
                 console.log('default')
                 break;
         }
-        
+        console.log(num)
+        console.log(num1)
+        console.log(num2)
         //previousValueText.innerText = num1 + operatorText.innerText + num2 + equal.innerText;
         //operatorText.innerText = "=";
         const totalOperation = num1 + operatorText.innerText + num2 + equal.innerText + operationResult;
         previousValueText.innerHTML = "";
-        num2="";
+        num2=null;
+        num1=null;
         num=null;
+        console.log(num)
+        console.log(num1)
+        console.log(num2)
         
         
         history(totalOperation)
