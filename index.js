@@ -22,8 +22,7 @@ clear();
 // pasar a las funciones los parametros para asi evitar declarar funciones dentro de otras 
 
 // Reemplazo el * por la x-----------------------------------------------------------------------------------------------------
-function operatorDefine(i) {
-    
+function operatorDefine(i) {    
     if (i === "*") {
         operatorText.innerText = "x" ;
     } else {
@@ -37,12 +36,10 @@ function operators(){
             const oper = button.dataset.value;
             operatorDefine(oper);
             if (operationResult != null && num == null) {// en caso de querer usar el resultado de la operacion como mi primer valor
-                console.log('yilt');
                 return firstNumberUp(operationResult);
                 
             } else if (num != null && num1 != null && operationResult != null) {// en caso de querer arrancar una nueva cuenta resetear todo
                 operationResult=null;
-                console.log('colot')
                 return firstNumberUp(num);
                 
             } else {
@@ -64,6 +61,35 @@ function numbers() {
         })
     })
 }
+//Teclado-------------------------------------------------------
+function teclado(event){
+    const x = event.key;
+    console.log(x);
+    switch (x) {
+        case "0": updateNumValue(x); print(num); break;
+        case "1": updateNumValue(x); print(num); break;
+        case "2": updateNumValue(x); print(num); break;
+        case "3": updateNumValue(x); print(num); break;
+        case "4": updateNumValue(x); print(num); break;
+        case "5": updateNumValue(x); print(num); break;
+        case "6": updateNumValue(x); print(num); break;
+        case "7": updateNumValue(x); print(num); break;
+        case "8": updateNumValue(x); print(num); break;
+        case "9": updateNumValue(x); print(num); break;
+        case ".": updateNumValue(x); print(num); break;
+        case "+": operatorDefine(x); firstNumberUp(num); break;
+        case "*": operatorDefine(x); firstNumberUp(num); break;
+        case "-": operatorDefine(x); firstNumberUp(num); break;
+        case "/": operatorDefine(x); firstNumberUp(num); break;
+        case "Enter": equal.click();break;
+        
+     
+    }      
+    
+        
+}
+
+document.addEventListener("keypress", teclado, false);
 function updateNewNumValue(value){//tengo que hacer una nueva funcion igual a esta porque me imprime el numero 2 de la pasada cuenta
     
     const currentNums = num ; 
