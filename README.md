@@ -3,4 +3,7 @@ Calculate.js has a class with the operations.
 
 Index.js has all the logic.
 
+Deployment
+https://axelschein.github.io/Calculator/
+
 
